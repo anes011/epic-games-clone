@@ -1,0 +1,208 @@
+.search-field {
+    margin-top: 5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input {
+    height: 40px;
+    width: 230px;
+    border-radius: 20px;
+    border: none;
+    text-indent: 2.5rem;
+    background-color: #404040;
+    color: #fff;
+}
+
+.input-field input::placeholder {
+    color: rgb(221, 221, 221);
+}
+
+.input-field svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(.8);
+    left: 10px;
+    color: rgb(221, 221, 221);
+}
+
+.search-field button {
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: none;
+    color: rgb(167, 167, 167);
+    cursor: pointer;
+}
+
+.search-field button:focus {
+    color: #fff;
+}
+
+.display-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container {
+    height: 640px;
+    width: 1100px;
+    border-radius: 20px;
+    background: url(https://cdn2.unrealengine.com/egs-ac-mirage-carousel-desktop-1920x1080-9380e8fef189.jpg?h=720&quality=medium&resize=1&w=1280) no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    cursor: pointer;
+}
+
+.left-container img {
+    height: 100px;
+    margin-top: 11.5rem;
+    margin-left: 3rem;
+}
+
+.now-available {
+    color: #fff;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    font-size: 13px;
+}
+
+.game-desc {
+    color: #fff;
+    margin-left: 3rem;
+    margin-top: 14px;
+    width: 350px;
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+.starting-at {
+    color: #fff;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.buy-wishlist-container {
+    margin-left: 3rem;
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.buy-btn {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.wishlist-btn {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    padding-inline: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.wishlist-btn:hover {
+    background-color: rgba(133, 133, 133, 0.4);
+}
+
+.add-icon {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: relative;
+}
+
+.add-icon::after {
+    content: '+';
+    position: absolute;
+    color: #fff;
+    font-size: 1rem;
+    top: 45%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+}
+
+.right-container {
+    height: 640px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-card {
+    height: 105px;
+    display: flex;
+    padding: 11px 15px;
+    gap: 15px;
+    color: #fff;
+    align-items: center;
+    transition: all .15s ease;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: rgb(147, 147, 147);
+    left: 0;
+    z-index: 1;
+}
+
+.overlay-active {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: rgb(147, 147, 147);
+    left: 0;
+    z-index: 1;
+    animation: overlay 10s linear;
+}
+
+@keyframes overlay {
+    100% {
+        width: 100%;
+    }
+}
+
+.game-card:hover {
+    background-color: rgb(61, 61, 61);
+}
+
+.game-card p {
+    width: 150px;
+    line-height: 25px;
+    z-index: 2;
+}
+
+.game-card img {
+    height: 100%;
+    width: 60px;
+    border-radius: 10px;
+    z-index: 2;
+}
