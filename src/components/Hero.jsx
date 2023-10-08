@@ -12,42 +12,102 @@ function Hero() {
 
     const leftDisplay = useRef(null);
 
+    const logo = useRef(null);
+    const description = useRef(null);
+    const price = useRef(null);
+    const buyBtn = useRef(null);
+    const availability = useRef(null);
+
     useEffect(() => {
         const runOverlay = () => {
+            overlay6.current.classList.remove('overlay-active');
+            overlay6.current.parentElement.style.backgroundColor = 'transparent';
             overlay.current.classList.add('overlay-active');
+            overlay.current.parentElement.style.backgroundColor = 'rgb(61, 61, 61)';
+            leftDisplay.current.style.background = 'url("https://cdn2.unrealengine.com/egs-ac-mirage-carousel-desktop-1920x1080-9380e8fef189.jpg?h=720&quality=medium&resize=1&w=1280") no-repeat';
+            leftDisplay.current.style.backgroundSize = '100% 100%';
+            leftDisplay.current.style.backgroundPosition = 'center';
+            logo.current.src = 'https://cdn2.unrealengine.com/egs-ac-mirage-carousel-logo-350x143-038ecfd453ac.png';
+            description.current.textContent = 'Experience the story of Basim, a cunning thief seeking answers and justice as he navigates the streets of ninth-century Baghdad.';
+            price.current.textContent = 'Starting at $49.99';
+            buyBtn.current.textContent = 'BUY NOW';
+            availability.current.textContent = 'AVAILABLE NOW';
             setTimeout(() => {
+                overlay.current.classList.remove('overlay-active');
+                overlay.current.parentElement.style.backgroundColor = 'transparent';
                 overlay2.current.classList.add('overlay-active');
+                overlay2.current.parentElement.style.backgroundColor = 'rgb(61, 61, 61)';
                 leftDisplay.current.style.background = 'url("https://cdn2.unrealengine.com/fc24se-epic-merch-feature-carousel-desktop-1248x702-1248x702-51e411bd25db.png?h=720&quality=medium&resize=1&w=1280") no-repeat';
                 leftDisplay.current.style.backgroundSize = '100% 100%';
                 leftDisplay.current.style.backgroundPosition = 'center';
+                logo.current.src = 'https://cdn2.unrealengine.com/fc24se-epic-merch-feature-carousel-logo-350x83-350x83-21ae298df333.png';
+                description.current.textContent = 'EA SPORTS FC™ 24 welcomes you to The World’s Game: the most true-to-football experience ever.';
+                price.current.textContent = 'Starting at $69.99';
+                buyBtn.current.textContent = 'BUY NOW';
+                availability.current.textContent = 'AVAILABLE NOW';
             }, 10000);
             setTimeout(() => {
+                overlay2.current.classList.remove('overlay-active');
+                overlay2.current.parentElement.style.backgroundColor = 'transparent';
                 overlay3.current.classList.add('overlay-active');
+                overlay3.current.parentElement.style.backgroundColor = 'rgb(61, 61, 61)';
                 leftDisplay.current.style.background = 'url("https://cdn2.unrealengine.com/egs-witchfire-carousel-desktop-1248x702-2f0288fe9674.png?h=720&quality=medium&resize=1&w=1280") no-repeat';
                 leftDisplay.current.style.backgroundSize = '100% 100%';
                 leftDisplay.current.style.backgroundPosition = 'center';
+                logo.current.src = 'https://cdn2.unrealengine.com/egs-witchfire-carousel-logo-350x173-617c15475024.png';
+                description.current.textContent = 'Armed with strange weapons and forbidden magic, hunt a powerful witch holding the key to your salvation.';
+                price.current.textContent = 'Starting at $10.39';
+                buyBtn.current.textContent = 'BUY NOW';
+                availability.current.textContent = 'AVAILABLE NOW';
             }, 20000);
             setTimeout(() => {
+                overlay3.current.classList.remove('overlay-active');
+                overlay3.current.parentElement.style.backgroundColor = 'transparent';
                 overlay4.current.classList.add('overlay-active');
+                overlay4.current.parentElement.style.backgroundColor = 'rgb(61, 61, 61)';
                 leftDisplay.current.style.background = 'url("https://cdn2.unrealengine.com/egs-cp2077-phantom-liberty-carousel-desktop-1920x1080-96274ead1804.jpg?h=720&quality=medium&resize=1&w=1280") no-repeat';
                 leftDisplay.current.style.backgroundSize = '100% 100%';
                 leftDisplay.current.style.backgroundPosition = 'center';
+                logo.current.src = 'https://cdn2.unrealengine.com/egs-cp2077-phantom-liberty-carousel-logo-350x126-f5785ff4c215.png';
+                description.current.textContent = 'Return as cyber-enhanced mercenary V and embark on a high-stakes mission of espionage and intrigue to save the NUS President.';
+                price.current.textContent = 'Starting at $26.99';
+                buyBtn.current.textContent = 'BUY NOW';
+                availability.current.textContent = 'AVAILABLE NOW';
             }, 30000);
             setTimeout(() => {
+                overlay4.current.classList.remove('overlay-active');
+                overlay4.current.parentElement.style.backgroundColor = 'transparent';
                 overlay5.current.classList.add('overlay-active');
+                overlay5.current.parentElement.style.backgroundColor = 'rgb(61, 61, 61)';
                 leftDisplay.current.style.background = 'url("https://cdn2.unrealengine.com/egs-lords-of-the-fallen-carousel-desktop-1920x1080-8edcd525f1fc.jpg?h=720&quality=medium&resize=1&w=1280") no-repeat';
                 leftDisplay.current.style.backgroundSize = '100% 100%';
                 leftDisplay.current.style.backgroundPosition = 'center';
+                logo.current.src = 'https://cdn2.unrealengine.com/egs-lords-of-the-fallen-carousel-logo-350x43-4587fc175b9a.png';
+                description.current.textContent = 'As one of the fabled Dark Crusaders, embark on an epic quest to overthrow Adyr, the demon God.';
+                price.current.textContent = 'Starting at $44.00';
+                buyBtn.current.textContent = 'BUY NOW';
+                availability.current.textContent = 'AVAILABLE NOW';
             }, 40000);
             setTimeout(() => {
+                overlay5.current.classList.remove('overlay-active');
+                overlay5.current.parentElement.style.backgroundColor = 'transparent';
                 overlay6.current.classList.add('overlay-active');
+                overlay6.current.parentElement.style.backgroundColor = 'rgb(61, 61, 61)';
                 leftDisplay.current.style.background = 'url("https://cdn2.unrealengine.com/egs-horizon-forbidden-west-carousel-desktop-1920x1080-358478b6468a.jpg?h=720&quality=medium&resize=1&w=1280") no-repeat';
                 leftDisplay.current.style.backgroundSize = '100% 100%';
                 leftDisplay.current.style.backgroundPosition = 'center';
+                logo.current.src = 'https://cdn2.unrealengine.com/egs-horizon-forbidden-west-carousel-logo-350x137-4761b0e32379.png';
+                description.current.textContent = 'The epic Horizon Forbidden West in its entirety, including bonus content and the Burning Shores expansion.';
+                price.current.textContent = '';
+                buyBtn.current.textContent = 'WHISHLIST NOW';
+                availability.current.textContent = 'COMING SOON';
             }, 50000);
         }
-
+    
         runOverlay();
+        setInterval(() => {
+            runOverlay();
+        }, 60000);
     });
 
     return(
@@ -66,12 +126,12 @@ function Hero() {
 
             <div className="display-container">
                 <div ref={leftDisplay} className="left-container">
-                    <img src="https://cdn2.unrealengine.com/egs-ac-mirage-carousel-logo-350x143-038ecfd453ac.png" alt="" />
-                    <p className='now-available'>NOW AVAILABLE</p>
-                    <p className='game-desc'>Experience the story of Basim, a cunning thief seeking answers and justice as he navigates the streets of ninth-century Baghdad.</p>
-                    <p className='starting-at'>Starting at $49.99</p>
+                    <img ref={logo} src="https://cdn2.unrealengine.com/egs-ac-mirage-carousel-logo-350x143-038ecfd453ac.png" alt="" />
+                    <p ref={availability} className='now-available'>NOW AVAILABLE</p>
+                    <p ref={description} className='game-desc'>Experience the story of Basim, a cunning thief seeking answers and justice as he navigates the streets of ninth-century Baghdad.</p>
+                    <p ref={price} className='starting-at'>Starting at $49.99</p>
                     <div className="buy-wishlist-container">
-                        <button className="buy-btn">BUY NOW</button>
+                        <button ref={buyBtn} className="buy-btn">BUY NOW</button>
                         <button className="wishlist-btn">
                             <div className="add-icon"></div>
                             <p>ADD TO WISHLIST</p>
